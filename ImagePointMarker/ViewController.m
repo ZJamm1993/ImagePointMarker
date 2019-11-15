@@ -49,6 +49,7 @@
     self.imageView.image = image;
     self.markedModel.image = image;
     self.markedModel.name = [[filePath componentsSeparatedByString:@"/"] lastObject];
+    [self.markedModel.points removeAllObjects];
     [self reloadData];
 }
 
