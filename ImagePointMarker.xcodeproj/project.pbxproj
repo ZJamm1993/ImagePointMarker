@@ -12,6 +12,8 @@
 		1C8A6A42237E432E005DE53F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8A6A41237E432E005DE53F /* Assets.xcassets */; };
 		1C8A6A45237E432E005DE53F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8A6A43237E432E005DE53F /* Main.storyboard */; };
 		1C8A6A48237E432E005DE53F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8A6A47237E432E005DE53F /* main.m */; };
+		1C8A6A56237E4439005DE53F /* ZZDragFileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8A6A54237E4439005DE53F /* ZZDragFileView.m */; };
+		1CD06137237E51960054A038 /* PointMarkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD06136237E51960054A038 /* PointMarkModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,10 @@
 		1C8A6A46237E432E005DE53F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C8A6A47237E432E005DE53F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1C8A6A49237E432E005DE53F /* ImagePointMarker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImagePointMarker.entitlements; sourceTree = "<group>"; };
+		1C8A6A54237E4439005DE53F /* ZZDragFileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZDragFileView.m; sourceTree = "<group>"; };
+		1C8A6A55237E4439005DE53F /* ZZDragFileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZDragFileView.h; sourceTree = "<group>"; };
+		1CD06135237E51960054A038 /* PointMarkModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PointMarkModel.h; sourceTree = "<group>"; };
+		1CD06136237E51960054A038 /* PointMarkModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointMarkModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,10 @@
 				1C8A6A3C237E432D005DE53F /* AppDelegate.m */,
 				1C8A6A3E237E432D005DE53F /* ViewController.h */,
 				1C8A6A3F237E432D005DE53F /* ViewController.m */,
+				1C8A6A55237E4439005DE53F /* ZZDragFileView.h */,
+				1C8A6A54237E4439005DE53F /* ZZDragFileView.m */,
+				1CD06135237E51960054A038 /* PointMarkModel.h */,
+				1CD06136237E51960054A038 /* PointMarkModel.m */,
 				1C8A6A41237E432E005DE53F /* Assets.xcassets */,
 				1C8A6A43237E432E005DE53F /* Main.storyboard */,
 				1C8A6A46237E432E005DE53F /* Info.plist */,
@@ -139,9 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8A6A56237E4439005DE53F /* ZZDragFileView.m in Sources */,
 				1C8A6A40237E432D005DE53F /* ViewController.m in Sources */,
 				1C8A6A48237E432E005DE53F /* main.m in Sources */,
 				1C8A6A3D237E432D005DE53F /* AppDelegate.m in Sources */,
+				1CD06137237E51960054A038 /* PointMarkModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +292,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = jam.studio.ImagePointMarker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -297,6 +310,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = jam.studio.ImagePointMarker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
