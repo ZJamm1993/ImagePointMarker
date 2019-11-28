@@ -44,8 +44,23 @@
 
 #pragma mark - load image file and show
 
+- (NSImage *)resizeImage:(NSImage *)sourceImage forSize:(NSSize)size {
+    NSRect targetFrame = NSMakeRect(0, 0, size.width, size.height);
+
+    NSImageRep *sourceImageRep = [sourceImage bestRepresentationForRect:targetFrame context:nil hints:nil];
+
+    NSImage *targetImage = [[NSImage alloc] initWithSize:size];
+
+    [targetImage lockFocus];
+    [sourceImageRep drawInRect: targetFrame];
+    [targetImage unlockFocus];
+
+    return targetImage;
+}
+
 - (void)loadImageFile:(NSString *)filePath {
     NSImage *image = [[NSImage alloc] initWithContentsOfFile:filePath];
+    image = [self resizeImage:image forSize:NSMakeSize(500, 500)];
     self.imageView.image = image;
     self.markedModel.image = image;
     self.markedModel.name = [[filePath componentsSeparatedByString:@"/"] lastObject];
